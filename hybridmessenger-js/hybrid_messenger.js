@@ -9,30 +9,52 @@
         TYPE_UNKNOW: 'unknow'
     }
 
+    var Logger = {
+        debugable: false,
+        setDebugable: function(isDebugable){
+            this.debugable = isDebugable;
+        },
+        isDebugable: function(){
+            return this.isDebugable;
+        },
+        debug: function(msg){
+            if(this.debugable){
+                this.printLog(msg);
+            }
+        },
+        info: function(msg) {
+            this.printLog(msg);
+        },
+        printLog: function(msg){
+            console.log(msg);
+        },
+
+    }
+
     var HybridMessenger = {
     	callbackList: {},
         _send: function (hybridMessage,callback) {
         	this.callbackList[hybridMessage.header.messageId] = callback;
 
         	var callbackSize = Object.keys(this.callbackList).length;
-        	console.log('[HybridMessage H5] [FW] Messenger.sendMessage callbackList size = ' + callbackSize);
+        	Logger.debug('[HybridMessage H5] [FW] Messenger.sendMessage callbackList size = ' + callbackSize);
 
             var webMessageJsonString = JSON.stringify(hybridMessage);
 
-            console.log('[HybridMessage H5] [FW] Messenger.sendMessage webMessage json string = ' + webMessageJsonString);
+            Logger.debug('[HybridMessage H5] [FW] Messenger.sendMessage webMessage json string = ' + webMessageJsonString);
 
             var result = window.prompt(webMessageJsonString, "");
-            console.log('[HybridMessage H5] [FW] prompt result = ' + result);
+            Logger.debug('[HybridMessage H5] [FW] prompt result = ' + result);
             return true;
         },
         //1.当发送到native端的消息，native端已经处理完成之后，通过此入口进入
         //2.当native主动向web端发送消息，也在此接收消息
         //3.这两种情况，都均通过WMessage#type来进行区分
         onReceiveHybridMessage: function(hybridMessage) {
-        	console.log('[HybridMessage H5] [FW] receive reponse hybrid message = ' + hybridMessage);
+        	Logger.info('[HybridMessage H5] [FW] receive reponse hybrid message = ' + hybridMessage);
         	var jsonHybridMessage = JSON.parse(hybridMessage);
 
-        	console.log('[HybridMessage H5] [FW] receive reponse hybrid message uri = ' + jsonHybridMessage.header.uri);
+        	Logger.info('[HybridMessage H5] [FW] receive reponse hybrid message uri = ' + jsonHybridMessage.header.uri);
 
         	var responseHybridMessage = HybridMessage.prototype.createBy(jsonHybridMessage);
 
@@ -41,7 +63,7 @@
         	var callback = this.callbackList[jsonHybridMessage.header.messageId];
 
         	if(callback == undefined){
-        		console.log('[HybridMessage H5] [FW] receive reponse hybrid message, but callback not found, Look at what listen on this message uri ');
+        		Logger.debug('[HybridMessage H5] [FW] receive reponse hybrid message, but callback not found, Look at what listen on this message uri ');
 
         		//此uri不包含query
         		var uri = responseHybridMessage.header.uri.getUri();
@@ -49,32 +71,32 @@
         		callback = this.callbackList[uri];
 
         		if(callback == undefined) {
-        			console.log('[HybridMessage H5] [FW] receive reponse hybrid message , do nothing');
+        			Logger.debug('[HybridMessage H5] [FW] receive reponse hybrid message , do nothing');
         			return ;
         		}
 
         		callback(responseHybridMessage);
 
         	} else {
-        		console.log('[HybridMessage H5] [FW] receive reponse hybrid message callback typeof = ' + typeof(callback));
+        		Logger.debug('[HybridMessage H5] [FW] receive reponse hybrid message callback typeof = ' + typeof(callback));
         		callback.call(this,responseHybridMessage);
         	}
         },
         registerHybridMessageReceiver: function(webUri,receiver){
         	var uri = webUri.getUri();
 
-        	console.log("[HybridMessage H5] [FW] registerWebMessageReceiver uri = " + uri);
+        	Logger.debug("[HybridMessage H5] [FW] registerWebMessageReceiver uri = " + uri);
 
         	this.callbackList[uri] = receiver;
         },
         sendHybridMessage: function(weburi,bodyData,callback){
 
         	if(typeof(weburi) == 'undefined') {
-        		console.log("weburi is undefined,please check");
+        		Logger.debug("weburi is undefined,please check");
         		return false;
         	}
 
-        	console.log("[HybridMessage H5] [FW] sendhybridMessage weburi typeof = " + typeof(weburi));
+        	Logger.debug("[HybridMessage H5] [FW] sendhybridMessage weburi typeof = " + typeof(weburi));
 
         	if(typeof(parameters) == 'string') {
         		parameters = eval("("+parameters+")");
@@ -110,10 +132,10 @@
         }
 
         this.printToConsole = function(){
-    		console.log(" header.messageId = " + this.messageId);
-    		console.log(" header.uri = " + this.uri.toUriString());
-    		console.log(" header.from = " + this.from);
-    		console.log(" header.type = " + this.type);
+    		Logger.info(" header.messageId = " + this.messageId);
+    		Logger.info(" header.uri = " + this.uri.toUriString());
+    		Logger.info(" header.from = " + this.from);
+    		Logger.info(" header.type = " + this.type);
 
     		this.uri.printToConsole();
     	}
@@ -124,7 +146,7 @@
     	this.data = '';
 
     	this.printToConsole = function(){
-    		console.log(" body.data = " + this.data);
+    		Logger.info(" body.data = " + this.data);
     	}
 
     }
@@ -139,12 +161,12 @@
         }
 
         this.printToConsole = function(){
-        	console.log("*****  hybridmessage infos start *****");
+        	Logger.info("*****  hybridmessage infos start *****");
 
         	this.header.printToConsole();
         	this.body.printToConsole();
 
-        	console.log("*****  hybridmessage infos end   *****");
+        	Logger.info("*****  hybridmessage infos end   *****");
         }
 
         this.reply = function(data,callback){
@@ -173,7 +195,7 @@
 
                 params += key+"=" + this.query[key] + "&";
 
-                console.log("uri.query.key = "+ key +" , value = " + this.query[key]);
+                Logger.info("uri.query.key = "+ key +" , value = " + this.query[key]);
             }
 
             if(params!=''){
@@ -184,10 +206,10 @@
         }
 
         this.printToConsole = function(){
-    		console.log("[HybridMessage H5] webUri.scheme = " + this.scheme);
-    		console.log("[HybridMessage H5] webUri.host = " + this.host);
-    		console.log("[HybridMessage H5] webUri.port = " + this.port);
-    		console.log("[HybridMessage H5] webUri.path = " + this.path);
+    		Logger.info("[HybridMessage H5] webUri.scheme = " + this.scheme);
+    		Logger.info("[HybridMessage H5] webUri.host = " + this.host);
+    		Logger.info("[HybridMessage H5] webUri.port = " + this.port);
+    		Logger.info("[HybridMessage H5] webUri.path = " + this.path);
     	}
 
     }
@@ -332,6 +354,7 @@
     };
 
     win.HybridMessenger = HybridMessenger;
+    win.Logger = Logger;
     win.WebUri = WebUri;
     win.baseUri = baseUri;
     win.MessageType = MessageType;

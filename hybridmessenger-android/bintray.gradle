@@ -63,8 +63,8 @@ bintray {
     pkg {
 
         repo = 'maven_share'
-        name = 'HybridMessengerAndroidImpl'
-        desc = 'HybridMessengerAndroidImpl - implementation of hybrid messenger'
+        name = 'HybridMessenger-AndroidImpl'
+        desc = 'HybridMessenger-AndroidImpl - implementation of hybrid messenger'
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

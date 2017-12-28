@@ -49,6 +49,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+	compile 'com.devyok.web:hybridmessenger-core:0.0.1'
 }
 
 apply from: 'bintray.gradle'

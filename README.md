@@ -38,7 +38,7 @@ HybridMessenger共支持**Android**与[**iOS**](https://github.com/devyok/Hybrid
 ### 第一步 ###
 
 
-- 开始接收消息
+- 启动接收消息
 	
 	WebClientImpl.create(webView).startReceiveWebMessage();
 

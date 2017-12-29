@@ -2,6 +2,8 @@
 Android Hybrid开发中Native与H5通信框架
 
 
+
+
 # 如何使用 #
 
 [直接看实例代码](https://github.com/devyok/HybridMessenger/tree/master/hybridmessenger-sample)
@@ -15,7 +17,7 @@ Android Hybrid开发中Native与H5通信框架
 将工程目录(hybridmessenger-js)下的hybrid_messenger.js复制到你对应的js库目录下，通过
 script标签引入。
 
-注意：如果要调试hybrid_messenger.js,请尽量打开debug log；
+注意：如果要调试hybrid_messenger.js,请打开debug log；
 
 	Logger.setDebugable(true);
 

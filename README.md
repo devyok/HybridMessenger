@@ -2,7 +2,7 @@
 Android Hybrid开发中Native与H5通信框架
 
 
-##如何使用 ##
+##如何使用##
 
 [直接看实例代码](https://github.com/devyok/HybridMessenger/tree/master/hybridmessenger-sample)
 

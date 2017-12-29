@@ -12,14 +12,16 @@ HybridMessenger共支持**Android**与[**iOS**](https://github.com/devyok/Hybrid
 
 ## 引入 ##
 
-###第一步###
+[前端JS库引入](https://github.com/devyok/HybridMessenger-JavaScript/blob/master/README.md)
+
+### 第一步 ###
 在gradle中引入HybridMessenger
 	
 	dependencies {
 	    compile 'com.devyok.web:hybridmessenger-android:0.0.1'
 	}
 
-###第二步###
+### 第二步 ###
 在Application#onCreate中配置HybridMessenger
 
 	Configuration configuration = new Configuration.Builder();

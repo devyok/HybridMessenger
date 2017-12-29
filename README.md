@@ -15,7 +15,7 @@ HybridMessenger共支持**Android**与[**iOS**](https://github.com/devyok/Hybrid
 ## 引入 ##
 
 ### 第一步 ###
-将工程目录(hybridmessenger-js)下的hybrid_messenger.js复制到你对应的js库目录下，通过
+将[HybridMessenger-JavaScript](https://github.com/devyok/HybridMessenger-JavaScript)下将hybrid_messenger.js复制到你对应的js库目录下，通过
 script标签引入。
 
 注意：如果要调试hybrid_messenger.js,请打开debug log；

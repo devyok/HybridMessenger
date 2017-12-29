@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/test01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="定义指定模块的消息接收器"
+        />
+    
+    <Button
+        android:id="@+id/test02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支持优先级的消息接收器(并可中断消息)"
+        />
+    
+    <Button
+        android:id="@+id/test03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加全局拦截器"
+        />
+    
+    <Button
+        android:id="@+id/test04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送消息到H5"
+        />
+    
+
+</LinearLayout>

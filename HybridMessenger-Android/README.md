@@ -4,22 +4,22 @@
 
 # 如何使用 #
 
-[直接看实例代码](https://github.com/devyok/HybridMessenger/tree/master/hybridmessenger-sample)
+[直接看实例代码](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-sample)
 
 
 ## 引入 ##
 
-[前端JS库引入](https://github.com/devyok/HybridMessenger-JavaScript/blob/master/README.md)
+[前端JS库引入](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-JavaScript/README.md)
 
 ### 第一步 ###
-在gradle中引入HybridMessenger
+在gradle中引入HybridMessenger-Android
 	
 	dependencies {
 	    compile 'com.devyok.web:hybridmessenger-android:0.0.1'
 	}
 
 ### 第二步 ###
-在Application#onCreate中配置HybridMessenger
+在Application#onCreate中配置HybridMessenger-Android
 
 	Configuration configuration = new Configuration.Builder();
 

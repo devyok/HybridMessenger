@@ -1,5 +1,5 @@
 # HybridMessenger-iOS
-Hybrid开发中Native与H5通信框架
+在iOS Hybrid开发中Native与H5通信框架
 
 HybridMessenger共支持[**Android**](https://github.com/devyok/HybridMessenger)与**iOS**两个平台的Native与Web的通信支持。您当前看到的是对Android平台的支持。
 

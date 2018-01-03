@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.devyok.web.hybridmessenger.sample">
+
+    <application
+        android:allowBackup="true"
+        android:name="com.devyok.bybrid.messenger.sample.SampleApplication"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:name="com.devyok.bybrid.messenger.sample.TestListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.devyok.bybrid.messenger.sample.H5SendMessageToNativeActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.devyok.bybrid.messenger.sample.H5toNativeTest01Activity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.devyok.bybrid.messenger.sample.H5toNativeTest02Activity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.devyok.bybrid.messenger.sample.H5toNativeTest03Activity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.devyok.bybrid.messenger.sample.H5toNativeTest04Activity"
+            android:label="@string/app_name" >
+        </activity>
+
+    </application>
+
+</manifest>

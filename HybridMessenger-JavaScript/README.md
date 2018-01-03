@@ -4,7 +4,7 @@ Hybrid开发中Web向Native发送消息的支持库
 
 # 如何使用 #
 
-[直接看实例代码](https://github.com/devyok/HybridMessenger-JavaScript/tree/master/hybridmessenger-js-sample)
+[直接看实例代码](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-JavaScript/hybridmessenger-js-sample)
 
 ## 引入 ##
 

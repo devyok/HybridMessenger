@@ -33,6 +33,6 @@ HybridMessenger is released under the Apache 2.0 license.
 Copyright (C) 2017 DengWei.
 
 
-## 结尾 ##
+## End ##
 
 如果HybridMessenger有帮到你，别忘了给颗星。

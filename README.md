@@ -8,20 +8,20 @@ HybridMessenger共支持**Android**与**iOS**平台的Native与Web的通信支�
 
 ## 接入 ##
 
-### Getting started ###
+### 入门 ###
 
 - [Getting started with Android](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-Android/README.md)
 - [Getting started with iOS](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-iOS/README.md)
 - [Getting started with Js](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-JavaScript/README.md)
 
 
-### Sample ###
+### 例子 ###
 - [HybridMessenger-Android-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-sample)
 - [HybridMessenger-iOS-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-sample)
 - [HybridMessenger-JavaScript-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-JavaScript/hybridmessenger-js-sample)
 
 
-### Source code ###
+### 源代码 ###
 
 - [Android source code ](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-core)
 - [iOS source code](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-iOS) 
@@ -33,6 +33,6 @@ HybridMessenger is released under the Apache 2.0 license.
 Copyright (C) 2017 DengWei.
 
 
-## End ##
+## 结束 ##
 
 如果HybridMessenger有帮到你，别忘了给颗星。

@@ -1,3 +1,5 @@
+[![license](http://img.shields.io/badge/license-Apache2.0-brightgreen.svg?style=flat)](https://github.com/devyok/HybridMessenger/blob/master/LICENSE)
+
 # HybridMessenger
 Native与H5通信框架
 

@@ -1,3 +1,8 @@
+[![license](http://img.shields.io/badge/license-Apache2.0-brightgreen.svg?style=flat)](https://github.com/devyok/HybridMessenger/blob/master/LICENSE)
+[![Release Version](https://img.shields.io/badge/release-0.0.1-brightgreen.svg)](https://jcenter.bintray.com/com/devyok/web/hybridmessenger-android/0.0.1/)
+
+
+
 # HybridMessenger-Android
 在Android Hybrid开发中Native与H5通信框架
 

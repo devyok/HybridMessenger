@@ -110,6 +110,41 @@ HybridMessageReceiver共包含两个方法：
 		}
 
 
+## 设计 ##
+
+**各组件依赖关系，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_component.png)
+
+**包依赖，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_package.png)
+
+**lib-core类图，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_class_hybridmessenger_core.png)
+
+**lib-exception类图，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_class_hybridmessenger_exception.png)
+
+**lib-android类图，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_class_hybridmessenger_android.png)
+
+
+**Web向Native发送消息，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_seq_hybridmessenger_web_send.png)
+
+**Native向Web发送消息，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_seq_hybridmessenger_native_send.png)
+
+**Native响应Web消息，见下图：**
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_seq_hybridmessenger_native_reply.png)
+
 
 ## License ##
 HybridMessenger is released under the [Apache 2.0 license](https://github.com/devyok/HybridMessenger/blob/master/LICENSE).

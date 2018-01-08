@@ -4,6 +4,11 @@
 
 ## 设计 ##
 
+## 整体架构，见下图 ##
+
+![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger.png)
+
+
 **各组件依赖关系，见下图：**
 
 ![](https://raw.githubusercontent.com/devyok/HybridMessenger/master/HybridMessenger-Android/lib_design_component.png)

@@ -1,5 +1,5 @@
 # HybridMessenger-iOS
-在iOS Hybrid开发中Native与H5通信框架
+在iOS Hybrid开发中Native与H5通信框架。
 
 
 # 如何使用 #

@@ -20,4 +20,6 @@ public interface WebClient{
 	 */
 	public boolean startReceiveWebMessage();
 
+	public void setUserAgent(String str);
+
 }

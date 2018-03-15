@@ -1,18 +1,24 @@
 package com.devyok.web.android;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.devyok.web.Executor;
-import com.devyok.web.WebClient;
 import com.devyok.web.HmLogger;
+import com.devyok.web.WebClient;
 import com.devyok.web.android.WebViewProviderProxy.OnInterceptMethod;
 import com.devyok.web.exception.HybridMessageRuntimeException;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 import java.lang.reflect.Method;
+
 /**
  * @author wei.deng
  */
@@ -25,6 +31,8 @@ public class WebClientImpl implements WebClient , OnInterceptMethod{
 	private WebViewClient webViewClient;
 
 	private WebViewProviderProxy viewProviderProxy;
+
+	private boolean mSetUaCalled = false;
 
 	private WebClientImpl(WebView wv) {
 		this(wv, new HybridMessageReceiveClient(),null);
@@ -122,9 +130,52 @@ public class WebClientImpl implements WebClient , OnInterceptMethod{
 		webSettings.setAllowFileAccess(true);
 		// 设置可以使用localStorage
 		webSettings.setDomStorageEnabled(true);
-
+		if(!mSetUaCalled)
+			webSettings.setUserAgentString(getDefaultCustomUserAgent(webView,""));
 
 		return true;
+	}
+
+	@Override
+	public void setUserAgent(String str) {
+		mSetUaCalled = true;
+		mWebView.getSettings().setUserAgentString(getDefaultCustomUserAgent(mWebView,str));
+	}
+
+	private String getDefaultCustomUserAgent(WebView webView,String extInfos){
+		String defaultUserAgent = webView.getSettings().getUserAgentString();
+		Context context = webView.getContext();
+
+		String packageName = context.getPackageName();
+		String version = getVersionName(context);
+		String platform = "Android";
+
+		JsonObject newUserAgentJson = new JsonObject();
+
+		newUserAgentJson.addProperty("packageName",packageName);
+		newUserAgentJson.addProperty("version",version);
+		newUserAgentJson.addProperty("platform", platform);
+		newUserAgentJson.addProperty("defaultUserAgent",defaultUserAgent);
+		newUserAgentJson.addProperty("extInfos",extInfos);
+
+		String newUserAgentJsonString = new Gson().toJson(newUserAgentJson);
+
+		HmLogger.info("WebClientImpl", "new useragent json string = " + newUserAgentJsonString);
+
+		return newUserAgentJsonString;
+	}
+
+	private String getVersionName(Context context){
+		String localVersion = "";
+		try {
+			PackageInfo packageInfo = context.getApplicationContext()
+					.getPackageManager()
+					.getPackageInfo(context.getPackageName(), 0);
+			localVersion = packageInfo.versionName;
+		} catch (PackageManager.NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		return localVersion;
 	}
 
 	@Override

@@ -70,8 +70,6 @@
 
             if(Utils.isJson(newUserAgentJson)){
 
-				
-				alert('isJson');
 			
                 Logger.info("typeof = "+(typeof newUserAgentJson));
 

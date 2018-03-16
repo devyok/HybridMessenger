@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 
-version = '0.0.1'
+version = '0.1.0'
 group = 'com.devyok.web'
 
 buildscript {
@@ -49,7 +49,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-	compile 'com.devyok.web:hybridmessenger-core:0.0.1'
+	compile 'com.devyok.web:hybridmessenger-core:0.1.0'
 }
 
 apply from: 'bintray.gradle'

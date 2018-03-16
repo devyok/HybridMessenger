@@ -1,6 +1,7 @@
 (function (win) {
 
 	var baseUri = createBaseUri('HybridMessage','devyok','80');
+	var useragent = navigator.userAgent;
 
 	//值的定义需要与native对应
 	var MessageType = {
@@ -27,7 +28,78 @@
         },
         printLog: function(msg){
             console.log(msg);
+        }
+
+    }
+	
+	var Utils = {
+        S4: function(){
+            return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
         },
+
+        guid: function(){
+            return (this.S4()+this.S4()+"-"+this.S4()+"-"+this.S4()+"-"+this.S4()+"-"+this.S4()+this.S4()+this.S4());
+        },
+
+        isJson: function(jsonString){
+			
+            try {
+                var result = JSON.parse(jsonString);
+
+                if(typeof result == 'object') {
+                    return true;
+                }
+
+            } catch(e){
+            }
+
+            return false;
+        }
+
+    }
+
+    Logger.info("navigator.userAgent = " + navigator.userAgent);
+
+    var NativeInfo = {
+        packageName: '',
+        version: '',
+        defaultUserAgent:'',
+        platform:'',
+        extInfos:'',
+        build: function(newUserAgentJson) {
+
+            if(Utils.isJson(newUserAgentJson)){
+
+				
+				alert('isJson');
+			
+                Logger.info("typeof = "+(typeof newUserAgentJson));
+
+                var userAgentJson = JSON.parse(newUserAgentJson);
+
+                this.packageName = userAgentJson.packageName;
+                Logger.info("nativeInfo.packageName = " + this.packageName);
+
+                this.version = userAgentJson.version;
+                Logger.info("nativeInfo.version = " + this.version);
+
+                this.defaultUserAgent = userAgentJson.defaultUserAgent;
+                Logger.info("nativeInfo.defaultUserAgent = " + this.defaultUserAgent);
+
+                this.platform = userAgentJson.platform;
+                Logger.info("nativeInfo.platform = " + this.platform);
+
+                this.extInfos = userAgentJson.extInfos;
+                Logger.info("nativeInfo.extInfos = " + this.extInfos);
+
+            } else {
+				
+                this.extInfos = newUserAgentJson;
+                Logger.info("nativeInfo.extInfos = " + this.extInfos);
+            }
+
+
+        }
 
     }
 
@@ -102,7 +174,7 @@
         		parameters = eval("("+parameters+")");
         	}
 
-        	var header = new Header(utils.guid(),weburi);
+        	var header = new Header(Utils.guid(),weburi);
         	var body = new Body();
         	body.data = bodyData;
 
@@ -353,21 +425,14 @@
 
     };
 
+    NativeInfo.build(useragent);
+    win.NativeInfo = NativeInfo;
     win.HybridMessenger = HybridMessenger;
     win.Logger = Logger;
     win.WebUri = WebUri;
     win.baseUri = baseUri;
     win.MessageType = MessageType;
 
-    var utils = {
-        S4: function(){
-            return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-        },
-
-        guid: function(){
-            return (this.S4()+this.S4()+"-"+this.S4()+"-"+this.S4()+"-"+this.S4()+"-"+this.S4()+this.S4()+this.S4());
-        }
-    }
 
 })(window);
 

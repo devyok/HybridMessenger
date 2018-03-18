@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF8763E42029E02200189F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8763E32029E02200189F04 /* AppDelegate.m */; };
+		DF8763E72029E02200189F04 /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8763E62029E02200189F04 /* UIWebViewController.m */; };
+		DF8763EC2029E02200189F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8763EB2029E02200189F04 /* Assets.xcassets */; };
+		DF8763F22029E02200189F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8763F12029E02200189F04 /* main.m */; };
+		DFEFE18C20594FE800C08FE5 /* NSURL+HMNSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEFE18B20594FE800C08FE5 /* NSURL+HMNSURL.m */; };
+		DFEFE18F20596CB700C08FE5 /* HMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEFE18E20596CB700C08FE5 /* HMHelper.m */; };
+		DFEFE192205979B200C08FE5 /* HMException.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEFE191205979B200C08FE5 /* HMException.m */; };
+		DFF154AA205CA6800065A6E2 /* hybrid_messenger.js in Resources */ = {isa = PBXBuildFile; fileRef = DFF154A9205CA6800065A6E2 /* hybrid_messenger.js */; };
+		DFF6A1DA205D62700029CB84 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6A1D9205D62700029CB84 /* MainViewController.m */; };
+		DFF83A8B2056BA6300DD55D1 /* HMUIWebViewProtocolImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A8A2056BA6300DD55D1 /* HMUIWebViewProtocolImpl.m */; };
+		DFF83A8E2056C1E600DD55D1 /* HybridMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A8D2056C1E600DD55D1 /* HybridMessenger.m */; };
+		DFF83A912056CABF00DD55D1 /* HMWKWebViewProtocolImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A902056CABF00DD55D1 /* HMWKWebViewProtocolImpl.m */; };
+		DFF83A942056CBFF00DD55D1 /* HMWebViewBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A932056CBFF00DD55D1 /* HMWebViewBaseImpl.m */; };
+		DFF83A972056D25F00DD55D1 /* HMMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A962056D25F00DD55D1 /* HMMessage.m */; };
+		DFF83A9A2056D27200DD55D1 /* HMMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A992056D27200DD55D1 /* HMMessageHeader.m */; };
+		DFF83A9D2056D28000DD55D1 /* HMMessageBody.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF83A9C2056D28000DD55D1 /* HMMessageBody.m */; };
+		DFFAB97C202DDC0100CFB74D /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = DFFAB97B202DDC0000CFB74D /* demo.html */; };
+		DFFC97A620556588002B80F5 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFC97A520556588002B80F5 /* WKWebViewController.m */; };
+		DFFC97A8205568E8002B80F5 /* wk_demo.html in Resources */ = {isa = PBXBuildFile; fileRef = DFFC97A7205568E8002B80F5 /* wk_demo.html */; };
+		DFFC97B720557B4D002B80F5 /* UIWebView+HMUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFC97B620557B4D002B80F5 /* UIWebView+HMUIWebView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF8763DF2029E02200189F04 /* hybridmessenger-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hybridmessenger-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8763E22029E02200189F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF8763E32029E02200189F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF8763E52029E02200189F04 /* UIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
+		DF8763E62029E02200189F04 /* UIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
+		DF8763EB2029E02200189F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF8763F02029E02200189F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8763F12029E02200189F04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF8763FD2029E7C300189F04 /* HMLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMLogger.h; sourceTree = "<group>"; };
+		DFEFE18A20594FE800C08FE5 /* NSURL+HMNSURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+HMNSURL.h"; sourceTree = "<group>"; };
+		DFEFE18B20594FE800C08FE5 /* NSURL+HMNSURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+HMNSURL.m"; sourceTree = "<group>"; };
+		DFEFE18D20596CB700C08FE5 /* HMHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMHelper.h; sourceTree = "<group>"; };
+		DFEFE18E20596CB700C08FE5 /* HMHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMHelper.m; sourceTree = "<group>"; };
+		DFEFE190205979B200C08FE5 /* HMException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMException.h; sourceTree = "<group>"; };
+		DFEFE191205979B200C08FE5 /* HMException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMException.m; sourceTree = "<group>"; };
+		DFF154A9205CA6800065A6E2 /* hybrid_messenger.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hybrid_messenger.js; sourceTree = "<group>"; };
+		DFF6A1D8205D62700029CB84 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DFF6A1D9205D62700029CB84 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DFF83A882056B99300DD55D1 /* HMWebViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMWebViewProtocol.h; sourceTree = "<group>"; };
+		DFF83A892056BA6300DD55D1 /* HMUIWebViewProtocolImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMUIWebViewProtocolImpl.h; sourceTree = "<group>"; };
+		DFF83A8A2056BA6300DD55D1 /* HMUIWebViewProtocolImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMUIWebViewProtocolImpl.m; sourceTree = "<group>"; };
+		DFF83A8C2056C1E600DD55D1 /* HybridMessenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridMessenger.h; sourceTree = "<group>"; };
+		DFF83A8D2056C1E600DD55D1 /* HybridMessenger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridMessenger.m; sourceTree = "<group>"; };
+		DFF83A8F2056CABF00DD55D1 /* HMWKWebViewProtocolImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMWKWebViewProtocolImpl.h; sourceTree = "<group>"; };
+		DFF83A902056CABF00DD55D1 /* HMWKWebViewProtocolImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMWKWebViewProtocolImpl.m; sourceTree = "<group>"; };
+		DFF83A922056CBFF00DD55D1 /* HMWebViewBaseImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMWebViewBaseImpl.h; sourceTree = "<group>"; };
+		DFF83A932056CBFF00DD55D1 /* HMWebViewBaseImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMWebViewBaseImpl.m; sourceTree = "<group>"; };
+		DFF83A952056D25F00DD55D1 /* HMMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMMessage.h; sourceTree = "<group>"; };
+		DFF83A962056D25F00DD55D1 /* HMMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMMessage.m; sourceTree = "<group>"; };
+		DFF83A982056D27200DD55D1 /* HMMessageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMMessageHeader.h; sourceTree = "<group>"; };
+		DFF83A992056D27200DD55D1 /* HMMessageHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMMessageHeader.m; sourceTree = "<group>"; };
+		DFF83A9B2056D28000DD55D1 /* HMMessageBody.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMMessageBody.h; sourceTree = "<group>"; };
+		DFF83A9C2056D28000DD55D1 /* HMMessageBody.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMMessageBody.m; sourceTree = "<group>"; };
+		DFFAB97B202DDC0000CFB74D /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		DFFC97A420556588002B80F5 /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		DFFC97A520556588002B80F5 /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		DFFC97A7205568E8002B80F5 /* wk_demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wk_demo.html; sourceTree = "<group>"; };
+		DFFC97B520557B4D002B80F5 /* UIWebView+HMUIWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+HMUIWebView.h"; sourceTree = "<group>"; };
+		DFFC97B620557B4D002B80F5 /* UIWebView+HMUIWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+HMUIWebView.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF8763DC2029E02200189F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF8763D62029E02200189F04 = {
+			isa = PBXGroup;
+			children = (
+				DF8763E12029E02200189F04 /* hybridmessenger-sample */,
+				DF8763E02029E02200189F04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF8763E02029E02200189F04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF8763DF2029E02200189F04 /* hybridmessenger-sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF8763E12029E02200189F04 /* hybridmessenger-sample */ = {
+			isa = PBXGroup;
+			children = (
+				DFFAB975202DD87600CFB74D /* www */,
+				DF8763FA2029E0E600189F04 /* HybridMessenger */,
+				DF8763E22029E02200189F04 /* AppDelegate.h */,
+				DF8763E32029E02200189F04 /* AppDelegate.m */,
+				DFF6A1D8205D62700029CB84 /* MainViewController.h */,
+				DFF6A1D9205D62700029CB84 /* MainViewController.m */,
+				DF8763E52029E02200189F04 /* UIWebViewController.h */,
+				DF8763E62029E02200189F04 /* UIWebViewController.m */,
+				DFFC97A420556588002B80F5 /* WKWebViewController.h */,
+				DFFC97A520556588002B80F5 /* WKWebViewController.m */,
+				DF8763EB2029E02200189F04 /* Assets.xcassets */,
+				DF8763F02029E02200189F04 /* Info.plist */,
+				DF8763F12029E02200189F04 /* main.m */,
+			);
+			path = "hybridmessenger-sample";
+			sourceTree = "<group>";
+		};
+		DF8763FA2029E0E600189F04 /* HybridMessenger */ = {
+			isa = PBXGroup;
+			children = (
+				DFFC97B520557B4D002B80F5 /* UIWebView+HMUIWebView.h */,
+				DFFC97B620557B4D002B80F5 /* UIWebView+HMUIWebView.m */,
+				DFEFE18A20594FE800C08FE5 /* NSURL+HMNSURL.h */,
+				DFEFE18B20594FE800C08FE5 /* NSURL+HMNSURL.m */,
+				DF8763FD2029E7C300189F04 /* HMLogger.h */,
+				DFF83A8C2056C1E600DD55D1 /* HybridMessenger.h */,
+				DFF83A8D2056C1E600DD55D1 /* HybridMessenger.m */,
+				DFF83A882056B99300DD55D1 /* HMWebViewProtocol.h */,
+				DFF83A892056BA6300DD55D1 /* HMUIWebViewProtocolImpl.h */,
+				DFF83A8A2056BA6300DD55D1 /* HMUIWebViewProtocolImpl.m */,
+				DFF83A8F2056CABF00DD55D1 /* HMWKWebViewProtocolImpl.h */,
+				DFF83A902056CABF00DD55D1 /* HMWKWebViewProtocolImpl.m */,
+				DFF83A922056CBFF00DD55D1 /* HMWebViewBaseImpl.h */,
+				DFF83A932056CBFF00DD55D1 /* HMWebViewBaseImpl.m */,
+				DFF83A952056D25F00DD55D1 /* HMMessage.h */,
+				DFF83A962056D25F00DD55D1 /* HMMessage.m */,
+				DFF83A982056D27200DD55D1 /* HMMessageHeader.h */,
+				DFF83A992056D27200DD55D1 /* HMMessageHeader.m */,
+				DFF83A9B2056D28000DD55D1 /* HMMessageBody.h */,
+				DFF83A9C2056D28000DD55D1 /* HMMessageBody.m */,
+				DFEFE18D20596CB700C08FE5 /* HMHelper.h */,
+				DFEFE18E20596CB700C08FE5 /* HMHelper.m */,
+				DFEFE190205979B200C08FE5 /* HMException.h */,
+				DFEFE191205979B200C08FE5 /* HMException.m */,
+			);
+			path = HybridMessenger;
+			sourceTree = "<group>";
+		};
+		DFFAB975202DD87600CFB74D /* www */ = {
+			isa = PBXGroup;
+			children = (
+				DFF154A9205CA6800065A6E2 /* hybrid_messenger.js */,
+				DFFC97A7205568E8002B80F5 /* wk_demo.html */,
+				DFFAB97B202DDC0000CFB74D /* demo.html */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF8763DE2029E02200189F04 /* hybridmessenger-sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8763F52029E02200189F04 /* Build configuration list for PBXNativeTarget "hybridmessenger-sample" */;
+			buildPhases = (
+				DF8763DB2029E02200189F04 /* Sources */,
+				DF8763DC2029E02200189F04 /* Frameworks */,
+				DF8763DD2029E02200189F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hybridmessenger-sample";
+			productName = "hybridmessenger-sample";
+			productReference = DF8763DF2029E02200189F04 /* hybridmessenger-sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF8763D72029E02200189F04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "邓伟";
+				TargetAttributes = {
+					DF8763DE2029E02200189F04 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DF8763DA2029E02200189F04 /* Build configuration list for PBXProject "hybridmessenger-sample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF8763D62029E02200189F04;
+			productRefGroup = DF8763E02029E02200189F04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF8763DE2029E02200189F04 /* hybridmessenger-sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF8763DD2029E02200189F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8763EC2029E02200189F04 /* Assets.xcassets in Resources */,
+				DFFC97A8205568E8002B80F5 /* wk_demo.html in Resources */,
+				DFFAB97C202DDC0100CFB74D /* demo.html in Resources */,
+				DFF154AA205CA6800065A6E2 /* hybrid_messenger.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF8763DB2029E02200189F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFEFE18F20596CB700C08FE5 /* HMHelper.m in Sources */,
+				DF8763E72029E02200189F04 /* UIWebViewController.m in Sources */,
+				DFF83A942056CBFF00DD55D1 /* HMWebViewBaseImpl.m in Sources */,
+				DFF83A9D2056D28000DD55D1 /* HMMessageBody.m in Sources */,
+				DF8763F22029E02200189F04 /* main.m in Sources */,
+				DF8763E42029E02200189F04 /* AppDelegate.m in Sources */,
+				DFEFE192205979B200C08FE5 /* HMException.m in Sources */,
+				DFF83A972056D25F00DD55D1 /* HMMessage.m in Sources */,
+				DFFC97A620556588002B80F5 /* WKWebViewController.m in Sources */,
+				DFF6A1DA205D62700029CB84 /* MainViewController.m in Sources */,
+				DFF83A8B2056BA6300DD55D1 /* HMUIWebViewProtocolImpl.m in Sources */,
+				DFFC97B720557B4D002B80F5 /* UIWebView+HMUIWebView.m in Sources */,
+				DFF83A912056CABF00DD55D1 /* HMWKWebViewProtocolImpl.m in Sources */,
+				DFF83A8E2056C1E600DD55D1 /* HybridMessenger.m in Sources */,
+				DFEFE18C20594FE800C08FE5 /* NSURL+HMNSURL.m in Sources */,
+				DFF83A9A2056D27200DD55D1 /* HMMessageHeader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF8763F32029E02200189F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DF8763F42029E02200189F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF8763F62029E02200189F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "hybridmessenger-sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deyvok.web.hybridmessenger-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF8763F72029E02200189F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "hybridmessenger-sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deyvok.web.hybridmessenger-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF8763DA2029E02200189F04 /* Build configuration list for PBXProject "hybridmessenger-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8763F32029E02200189F04 /* Debug */,
+				DF8763F42029E02200189F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8763F52029E02200189F04 /* Build configuration list for PBXNativeTarget "hybridmessenger-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8763F62029E02200189F04 /* Debug */,
+				DF8763F72029E02200189F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF8763D72029E02200189F04 /* Project object */;
+}

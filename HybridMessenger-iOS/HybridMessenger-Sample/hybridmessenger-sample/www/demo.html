@@ -1,0 +1,137 @@
+<html lang="zh-CN"> 
+<head>
+	<meta charset="utf-8">
+</head>
+
+<style>
+
+	input {font-size: 25px}
+
+</style>
+
+<script src="hybrid_messenger.js" type="text/javascript"></script>
+<script>
+	
+	(function(){
+     
+		Logger.setDebugable(true);
+		
+		var weburi = WebUri.prototype.setBaseUriPath("user");
+		
+		var i = 0;
+		
+		function webMessageCallback(webMessage){
+			var h1Node = document.getElementById("user_module");
+			h1Node.innerText = webMessage.body.data;
+			console.log("WebMessage H5 [主动] receive native body = " + webMessage.body.data);
+						
+			webMessage.printToConsole();
+			
+			if(webMessage.body.data == 'exit') {
+				
+				console.log('WebMessage H5 [主动] receive exit');
+
+				i = 0;
+
+				return ;
+			}
+			
+			console.log('WebMessage H5 [主动] reply Native');
+			webMessage.reply("reply data"+(++i),webMessageCallback);
+			
+		}
+		//注册
+		HybridMessenger.registerHybridMessageReceiver(weburi,webMessageCallback);
+				
+	})()
+	
+    function login(){
+		
+		var weburi = WebUri.prototype.createBy(baseUri);
+		
+    	weburi.path = 'user';
+    	weburi.query = {
+       		action: 'login',
+       		uname: 'dw',
+       		upwd: '123456'
+        };
+	    	
+    	var bodyData = "{value:'1000'}";
+    	
+    	function loginCallback(webMessage){
+    		console.log("WebMessage H5 [登陆] receive native body = " + webMessage.body.data);
+    	}
+    	console.log("WebMessage H5 [登陆] 发送消息");
+    	HybridMessenger.sendHybridMessage(weburi,bodyData,function(webMessage){
+    		console.log("WebMessage H5 [登陆] 接收到Native端的反馈消息  = " + webMessage.header.messageId + " , body = " + webMessage.body.data);
+    		console.log("WebMessage H5 [登陆] 继续发送200消息给Native，表示消息已经收到");
+    		webMessage.reply("h5 200",loginCallback);
+    	});
+    }
+    
+    function addUser(){
+    	
+    	var weburi = WebUri.prototype.createBy(baseUri);
+    	
+    	weburi.path = 'user';
+    	weburi.query = {
+     		action: 'addUser',
+  			uname: "dw",
+  			upwd: "123456",
+  			age: 30,
+  			gender: 0,
+  			address: "bj"
+        };
+    	
+       	HybridMessenger.sendHybridMessage(weburi,'',function(webMessage){
+       		console.log("WebMessage H5 [添加用户] receive webmessage = " + webMessage.header.messageId + " , body = " + webMessage.body.data);
+       	});
+    }
+    
+    function addProduct(){
+    	
+		var weburi = WebUri.prototype.createBy(baseUri);
+    	
+    	weburi.path = 'product';
+    	weburi.query = {
+        	action: 'addProject',
+        	pname: "tv",
+   			price: 1000
+        };
+		  		       	
+       	HybridMessenger.sendHybridMessage(weburi,'',function(webMessage){
+       		console.log("WebMessage H5 [添加商品] receive webmessage = " + webMessage.header.messageId + " , body = " + webMessage.body.data);
+       	});
+    }
+
+    function getUserAgent(){
+        alert("useragetn = "+navigator.userAgent);
+    }
+    
+
+</script>
+
+<body>
+
+<div><h1 id="user_module">点击以下按钮模拟发送消息到Native</h1></div>
+
+<div>
+    <span>请点击我1：</span><input type="button" value="getuseragent" onclick="javascript:getUserAgent();"><br><br><br><br>
+</div>
+
+<div>
+<span>请点击我1：</span><input type="button" value="登陆" onclick="javascript:login();"/><br><br><br><br>
+</div>
+
+<div>
+<span>请点击我2：</span><input type="button" value="添加用户" onclick="javascript:addUser('addUser');"/><br><br><br><br>
+</div>
+
+<div><h1>商品模块</h1></div>
+<div>
+<span>请点击我3：</span><input type="button" value="添加商品" onclick="javascript:addProduct('addProduct');"/><br><br><br><br>
+</div>
+
+</body>
+
+</html>

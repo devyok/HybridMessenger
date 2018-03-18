@@ -97,6 +97,18 @@
             }
 
 
+        },
+        isAndroid: function(){
+             if(this.platform == 'Android'){
+                return true;
+             }
+             return false;
+        },
+        isiOS: function(){
+             if(this.platform == 'iOS'){
+                return true;
+             }
+             return false;
         }
 
     }
@@ -113,17 +125,32 @@
 
             Logger.debug('[HybridMessage H5] [FW] Messenger.sendMessage webMessage json string = ' + webMessageJsonString);
 
-            var result = window.prompt(webMessageJsonString, "");
-            Logger.debug('[HybridMessage H5] [FW] prompt result = ' + result);
+            Logger.debug('[HybridMessage H5] [FW] NativeInfo.isAndroid = ' + NativeInfo.isAndroid());
+ 
+            if(NativeInfo.isAndroid()){
+                var result = window.prompt(webMessageJsonString, "");
+                Logger.debug('[HybridMessage H5] [FW] prompt result = ' + result);
+            } else if(NativeInfo.isiOS()) {
+                var iframeCom = document.createElement('iframe');
+                iframeCom.style.display = 'none';
+                iframeCom.src = (baseUri.toUriString()+'action?sendMessage='+webMessageJsonString);
+                document.documentElement.appendChild(iframeCom);
+            } else {
+                 var result = window.prompt(webMessageJsonString, "");
+                 Logger.debug('[HybridMessage H5] [FW] prompt result = ' + result);
+            }
+ 
             return true;
         },
         //1.当发送到native端的消息，native端已经处理完成之后，通过此入口进入
         //2.当native主动向web端发送消息，也在此接收消息
         //3.这两种情况，都均通过WMessage#type来进行区分
         onReceiveHybridMessage: function(hybridMessage) {
-        	Logger.info('[HybridMessage H5] [FW] receive reponse hybrid message = ' + hybridMessage);
+ 
+            Logger.info('[HybridMessage H5] [FW] receive hybrid message = ' + hybridMessage);
+ 
         	var jsonHybridMessage = JSON.parse(hybridMessage);
-
+ 
         	Logger.info('[HybridMessage H5] [FW] receive reponse hybrid message uri = ' + jsonHybridMessage.header.uri);
 
         	var responseHybridMessage = HybridMessage.prototype.createBy(jsonHybridMessage);
@@ -309,8 +336,11 @@
     }
 
     WebUri.prototype.setBaseUriPath = function(path){
-    	baseUri.path = path;
-    	return baseUri;
+ 
+        var uri = WebUri.prototype.createBy(baseUri);
+    	uri.path = path;
+ 
+    	return uri;
     }
 
     WebUri.prototype.parse = function(uriString){

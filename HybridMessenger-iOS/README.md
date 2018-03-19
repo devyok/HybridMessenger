@@ -60,7 +60,7 @@
     	HMMessageHeader *header = [[HMMessageHeader alloc] init];
     	header.messageType = MESSAGETYPE_NATIVE;
     	header.from = @"native";
-    	header.webUrl = webUri;
+    	header.webUrl = _userModulWebUri;
     
     	HMMessageBody *body = [[HMMessageBody alloc] init];
     	body.data = @"iOS Native Hybrid Message";

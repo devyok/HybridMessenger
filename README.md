@@ -22,7 +22,7 @@ HybridMessenger共支持**Android**与**iOS**平台的Native与Web的通信支�
 
 ### 例子 ###
 - [HybridMessenger-Android-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-sample)
-- [HybridMessenger-iOS-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-sample)
+- [HybridMessenger-iOS-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-iOS/HybridMessenger-Sample)
 - [HybridMessenger-JavaScript-Sample](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-JavaScript/hybridmessenger-js-sample)
 
 

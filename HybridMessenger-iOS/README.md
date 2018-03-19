@@ -14,7 +14,7 @@
 
 [前端JS库引入](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-JavaScript/README.md)
 
-### 第一步 ###
+## 第一步 ###
 - **cocoapods安装**
 
 	1. 在项目目录下新建podfile
@@ -28,7 +28,7 @@
 	将源代码[HybridMessenger](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-iOS/HybridMessenger)直接copy到工程中即可。
 
 
-### 第二步 ###
+## 第二步 ###
 - **导入头文件**
 
 		#import "HybridMessenger.h"

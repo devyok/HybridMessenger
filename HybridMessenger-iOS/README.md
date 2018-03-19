@@ -1,5 +1,5 @@
 [![license](http://img.shields.io/badge/license-Apache2.0-brightgreen.svg?style=flat)](https://github.com/devyok/HybridMessenger/blob/master/LICENSE)
-[![Release Version](https://img.shields.io/badge/release-0.2.4-brightgreen.svg)](https://jcenter.bintray.com/com/devyok/web/hybridmessenger-android/0.2.4/)
+[![Release Version](https://img.shields.io/badge/release-0.2.4-brightgreen.svg)](#)
 
 # HybridMessenger-iOS
 在iOS Hybrid开发中Native与H5通信框架
@@ -19,7 +19,7 @@
 
 	1. 在项目目录下新建podfile
 
-		pod 'HybridMessenger', '~> 0.2.4'
+			pod 'HybridMessenger', '~> 0.2.4'
 
 	2. pod install命令安装
 

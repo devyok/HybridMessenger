@@ -17,11 +17,11 @@
 ## 第一步 ###
 - **CocoaPods安装**
 
-	1. 在项目目录下新建podfile
+	1. 在项目目录下新建`podfile`
 
 			pod 'HybridMessenger', '~> 0.2.4'
 
-	2. pod install命令安装
+	2. `pod install`命令安装
 
 - **手动安装**
 
@@ -88,4 +88,3 @@
 HybridMessenger is released under the [Apache 2.0 license](https://github.com/devyok/HybridMessenger/blob/master/LICENSE).
 
 Copyright (C) 2017 DengWei.
-

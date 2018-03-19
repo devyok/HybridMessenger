@@ -29,7 +29,7 @@ HybridMessenger共支持**Android**与**iOS**平台的Native与Web的通信支�
 ### 源代码 ###
 
 - [Android source code ](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-Android/hybridmessenger-core)
-- [iOS source code](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-iOS) 
+- [iOS source code](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-iOS/HybridMessenger) 
 - [Js source code](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-JavaScript/hybridmessenger-js) 
 
 ### 设计 ###

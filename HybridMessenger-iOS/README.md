@@ -15,7 +15,7 @@
 [前端JS库引入](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-JavaScript/README.md)
 
 ## 第一步 ###
-- **cocoapods安装**
+- **CocoaPods安装**
 
 	1. 在项目目录下新建podfile
 
@@ -45,7 +45,7 @@
         
         	NSLog(@"接收到的数据 = %@ " , message.body.data);
         
-       		//[message replyWithData:@"reply to h5"];
+       		[message replyWithData:@"reply to h5"];
         
     	}];
 

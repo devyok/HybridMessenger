@@ -34,7 +34,9 @@ HybridMessenger共支持**Android**与**iOS**平台的Native与Web的通信支�
 
 ### 设计 ###
 
-- [Android 详细设计](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-Android/README_DESIGN.md)
+- [Android Design](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-Android/README_DESIGN.md)
+
+- [iOS Design](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-Android/README_DESIGN.md)
 
 ## License ##
 HybridMessenger is released under the Apache 2.0 license.

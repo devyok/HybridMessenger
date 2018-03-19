@@ -15,7 +15,7 @@
 [前端JS库引入](https://github.com/devyok/HybridMessenger/blob/master/HybridMessenger-JavaScript/README.md)
 
 ### 第一步 ###
-- cocoapods安装
+- **cocoapods安装**
 
 	1. 在项目目录下新建podfile
 
@@ -23,21 +23,21 @@
 
 	2. pod install命令安装
 
-- 手动安装
+- **手动安装**
 
 	将源代码[HybridMessenger](https://github.com/devyok/HybridMessenger/tree/master/HybridMessenger-iOS/HybridMessenger)直接copy到工程中即可。
 
 
 ### 第二步 ###
-- 导入头文件
+- **导入头文件**
 
 		#import "HybridMessenger.h"
 
-- 创建user模块的URL
+- **创建user模块的URL**
 
 		NSURL *_userModulWebUri = [NSURL createWithModuleName:@"user"];	
 
-- 根据user的url接收来自web端的消息
+- **根据user的url接收来自web端的消息**
 
 		[HybridMessenger registerCallbck:_userModulWebUri :^(HMMessage *message) {
         
@@ -49,11 +49,11 @@
         
     	}];
 
-- 绑定webview
+- **绑定webview**
 
 		[HybridMessenger bindWebView:self.webview];
 
-- 发送消息
+- **发送消息**
 
 		HMMessage *message = [[HMMessage alloc] init];
     
